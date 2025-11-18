@@ -1,0 +1,14 @@
+# Carpetas generadas por Android Studio / Gradle
+/build/
+**/build/
+
+# Archivos temporales del IDE
+.idea/
+*.iml
+
+# Configuración local del SDK (NO se puede subir)
+local.properties
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
