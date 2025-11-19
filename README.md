@@ -1,144 +1,115 @@
-📱 Petique 
+# 📱 Petique
 
-🐾 Descripción General
-
-Petique es una aplicación móvil desarrollada en Android (Kotlin + Jetpack Compose) diseñada para gestionar servicios veterinarios y estéticos para mascotas.
+## 🐾 Descripción General
+Petique es una aplicación móvil desarrollada en **Android (Kotlin + Jetpack Compose)** diseñada para gestionar servicios veterinarios y estéticos para mascotas.  
 Permite a los dueños registrarse, agendar citas personalizadas y administrar su perfil de usuario de manera fácil y rápida.
 
-✨ Funcionalidades Principales
+---
 
-🔐 Autenticación en la Nube
+## ✨ Funcionalidades Principales
 
--Registro:
-Los nuevos usuarios pueden crear una cuenta proporcionando nombre, documento, correo y contraseña.
-Los datos se validan y se almacenan de forma segura en Cloud Firestore.
+### 🔐 Autenticación en la Nube
+- **Registro:**  
+  Los usuarios pueden crear una cuenta proporcionando nombre, documento, correo y contraseña.  
+  Los datos se almacenan de forma segura en **Cloud Firestore**.
 
--Inicio de sesión (Login):
-Se validan las credenciales directamente contra la base de datos en la nube, permitiendo el acceso solo a usuarios registrados.
+- **Inicio de sesión:**  
+  Se validan las credenciales directamente contra la base de datos en la nube.
 
-📅 Gestión de Citas (Agendamiento)
+---
 
--El usuario puede crear una cita para su mascota, ingresando: nombre, raza, edad, tamaño y tipo de manejo.
+### 📅 Gestión de Citas
+El usuario puede crear una cita ingresando:
 
-Selección de:
+- Nombre, raza, edad, tamaño y tipo de manejo  
+- Selección de:
+  - Fecha (validando días hábiles)  
+  - Hora  
+  - Tipo de servicio (Vacunación, Baño, Paquetes, etc.)  
+  - Sede de atención  
 
--Fecha (validando días hábiles)
+Toda la información se guarda en tiempo real en **Firestore**, vinculada al dueño.
 
--Hora
+---
 
--Tipo de servicio (Vacunación, Baño, Paquetes especiales, etc.)
+### 👤 Perfil y Gestión de Usuario
+- Visualización de la información almacenada en Firestore  
+- Acceso al historial **Mis Citas**  
+- Cerrar sesión de forma segura  
 
--Sede de atención
+---
 
--Toda la información se guarda en tiempo real en Firestore, asociando la mascota y la cita con el dueño.
+## 🛠️ Arquitectura Técnica
+- **UI con Jetpack Compose:** Interfaz moderna, modular y reactiva  
+- **Navigation Compose:** Manejo de pantallas con paso de argumentos  
+- **Firebase Firestore:** Base de datos NoSQL en tiempo real  
 
-👤 Perfil y Gestión de Usuario
+---
 
--Visualización de la información personal almacenada en Firestore.
+# 🚀 Cómo Ejecutar la Aplicación Petique
 
--Acceso al historial de Mis Citas.
+Puedes ejecutar la app de dos formas:
 
--Opción de Cerrar sesión de forma segura.
+1. **Desde Android Studio (modo desarrollo)**  
+2. **Instalando el archivo APK (modo usuario)**  
 
-🛠️ Arquitectura Técnica
+---
 
--UI con Jetpack Compose:
-Interfaz moderna, reactiva y modular.
+## 📱 Opción 1: Ejecutar Desde Android Studio
 
--Navigation Compose:
-Manejo de navegación entre pantallas, pasando argumentos como número de documento o IDs de citas.
+### 📌 Prerrequisitos
+- Android Studio instalado  
+- Conexión a Internet  
 
--Base de datos Firebase Firestore:
-Backend NoSQL en tiempo real que reemplaza la necesidad de almacenar datos localmente.
+### ▶️ Pasos
 
+#### 1️⃣ Abrir el Proyecto
+- Abre Android Studio → **Open**
+- Selecciona la carpeta `ParcialAMFinalPetique`
+- Espera a que **Gradle** sincronice
 
-🚀 Cómo Ejecutar la Aplicación Petique
+#### 2️⃣ Configurar el Dispositivo
+**Dispositivo físico:**
+- Conecta el celular por USB  
+- Activa **Depuración USB**  
+- Verifica que Android Studio lo detecte  
 
-La aplicación Petique puede ejecutarse de dos formas:
+#### 3️⃣ Compilar y Ejecutar
+- Haz clic en el botón **Run** (verde)  
+- La app se instalará automáticamente  
 
-1. Desde Android Studio (modo desarrollo)
+#### 4️⃣ Flujo Inicial
+- **Registro:** crear cuenta  
+- **Login:** iniciar sesión  
+- **Agendar cita:** ingresar datos → fecha/hora → confirmar  
+- **Perfil:** ver datos descargados de Firestore  
 
-2. Instalando el archivo APK directamente en el celular (modo usuario)
+---
 
-A continuación se explican ambas:
+## 📱 Opción 2: Instalar Desde el Archivo APK
 
-📱 Opción 1: Ejecutar Desde Android Studio (Modo Desarrollo)
-📌 Prerrequisitos
+### 📌 Prerrequisitos
+- Dispositivo Android  
+- Archivo **Petique.apk**  
+- Conexión a Internet  
 
-Android Studio instalado.
+### ▶️ Pasos
 
-Conexión a internet activa.
+#### 1️⃣ Transferir el APK
+- Por WhatsApp, Drive, correo o cable USB  
 
-▶️ Pasos
-1️⃣ Abrir el Proyecto
+#### 2️⃣ Instalar la Aplicación
+- Busca `Petique.apk`  
+- Tócala para instalar  
+- Acepta **"Fuentes desconocidas"** si aparece  
+- Presiona **Instalar**  
 
-Abre Android Studio → Open.
+#### 3️⃣ Abrir la App
+- Busca el ícono **Petique** en el menú de aplicaciones  
+- Tócalo para abrir  
+
+#### 4️⃣ Primer Uso
+- **Registrarse:** ingresar datos  
+- **Iniciar sesión**  
+- ¡Listo! Puedes agendar citas veterinarias  
 
-Selecciona la carpeta ParcialAMFinalPetique.
-
-Espera la sincronización de Gradle.
-
-2️⃣ Configurar el Dispositivo
-
-Dispositivo físico:
-
-Conecta el celular por USB.
-
-Activa Depuración USB.
-
-Verifica que Android Studio lo reconozca.
-
-3️⃣ Compilar y Ejecutar
-
-Haz clic en Run (botón verde).
-
-La app se instalará automáticamente en el dispositivo elegido.
-
-4️⃣ Flujo Inicial de Prueba
-
-Registro: Crear cuenta con los datos.
-
-Login: Iniciar sesión con documento y contraseña.
-
-Agendar Cita: Ingresar datos de mascota → seleccionar fecha/hora → confirmar.
-
-Perfil: Ver datos cargados desde Firestore.
-
-
-📱 Opción 2: Ejecutar Desde el Archivo APK (Modo Usuario)
-📌 Prerrequisitos
-
-Un dispositivo Android.
-
-El archivo Petique.apk.
-
-Conexión a Internet.
-
-▶️ Pasos
-1️⃣ Transferir el APK al Celular
-
-Envía el archivo por WhatsApp, correo, Drive, o cable USB.
-
-2️⃣ Instalar la Aplicación
-
-Busca el archivo Petique.apk (Descargas o chat donde lo recibiste).
-
-Tócalo para instalar.
-
-Si aparece el aviso de "Fuentes desconocidas", permitir instalación.
-
-Presiona Instalar.
-
-3️⃣ Abrir la App
-
-Busca el ícono Petique en tu menú de aplicaciones.
-
-Tócalo para abrir.
-
-4️⃣ Primer Uso
-
-Registrarse: Crear cuenta con los datos.
-
-Iniciar Sesión: Acceder con documento y contraseña.
-
-¡Listo! Ya puedes agendar citas veterinarias.
