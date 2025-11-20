@@ -9,10 +9,10 @@
 
 | Integrante | Rol en el Proyecto |
 |------------|--------------------|
-| **Jennifer Salazar** | Conexión y configuración de **Firebase**, Firestore y autenticación |
-| **Natalia Sanjuan** | Desarrollo  de la **aplicación Android** (pantallas, funcionalidades y lógica) |
-| **Kimberly Caicedo** | **Diseño UI**, presentación visual y **documentación** del proyecto |
-| **María del mar Alvarez** | **Testing**, validación de funcionalidades y elaboración del video |
+| **Jennifer Salazar-407092**  | Conexión y configuración de **Firebase**, Firestore y autenticación |
+| **Natalia Sanjuan-407165** | Desarrollo  de la **aplicación Android** (pantallas, funcionalidades y lógica) |
+| **Kimberly Caicedo-407072** | **Diseño UI**, presentación visual y **documentación** del proyecto |
+| **María del mar Alvarez-407412** | **Testing**, validación de funcionalidades y elaboración del video |
 
 ---
 
